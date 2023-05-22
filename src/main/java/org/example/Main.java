@@ -24,8 +24,8 @@ public class Main {
 //        findAll();
 //        findById(2);
 //        findByCurrentMonth();
-//        sumPrice(200.000);
-        findProduct("java");
+        sumPrice(390.000);
+//        findProduct("java");
     }
 
     public  static void saveOrder(){

@@ -13,7 +13,7 @@ public interface OrdersRepository extends CrudRepository<OrdersEntity, Integer> 
     List<OrdersEntity> findId (int id);
     @Query(value = "SELECT * FROM jpa_join.orderdetailentity od join jpa_join.ordersentity o on od.ordersEntityId = o.id where MONTH(orderDate)=MONTH(now());", nativeQuery = true)
     List<OrdersEntity> findByCurrentMonth();
-    @Query(value = "SELECT o.*, sum(price) as sum FROM jpa_join.orderdetailentity od join jpa_join.ordersentity o on od.ordersEntityId = o.id \n" +
+    @Query(value = "SELECT o.*, sum(price * quantity) as sum FROM jpa_join.orderdetailentity od join jpa_join.ordersentity o on od.ordersEntityId = o.id \n" +
             "group by od.ordersEntityId\n" +
             "having sum >=?1" , nativeQuery = true)
     List<OrdersEntity> sumPrice(double price);

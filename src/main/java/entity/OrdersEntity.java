@@ -24,7 +24,7 @@ import java.util.List;
                 "id=" + id +
                 ", orderDate=" + orderDate +
                 ", customerName='" + customerName + '\'' +
-                ", orderdetailEntities=" + orderdetailEntities +
+
                 '}';
     }
 
