@@ -1,5 +1,6 @@
 package confi;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -23,7 +24,7 @@ public class JPA_config {
     public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/spring_jpa_1");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/jpa_join");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
         return dataSource;
